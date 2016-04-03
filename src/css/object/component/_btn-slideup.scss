@@ -1,0 +1,49 @@
+.c-btn-slideup {
+  width: 300px;
+  display: inline-block;
+  margin: 1em;
+  a {
+    display: block;
+    position: relative;
+    padding: 1em;
+    border: 2px solid $black;
+    text-decoration: none;
+  }
+  &__body {
+    position: relative;
+    z-index: 2;
+    color: $black;
+  }
+  &__bg {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $black;
+  }
+  //
+  //  Animation Init
+  //
+  &__body {
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(.1, .5, .2, .9);
+  }
+  &__bg {
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(.1, .5, .2, .9);
+  }
+  //
+  //  Animation Set
+  //
+  a:hover {
+    .c-btn-slideup {
+      &__body {
+        color: $white;
+      }
+      &__bg {
+        top: 0;
+      }
+    }
+  }
+}

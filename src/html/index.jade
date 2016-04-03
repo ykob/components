@@ -1,4 +1,4 @@
-- var meta_title = 'effective-parts';
+- var meta_title = '';
 - var meta_keywords = '';
 - var meta_description = 'a list of effective css3 parts to be used for web site.';
 - var meta_path = "";
@@ -11,5 +11,11 @@ html(lang="ja")
   body.index
     .l-page
       include ./modules/_l-gh.jade
+      .l-page__btns
+        .c-btn-slideup
+          a(href="#")
+            .c-btn-slideup__body
+              |button
+            .c-btn-slideup__bg
       include ./modules/_l-gf.jade
     script(src="js/main.js")
