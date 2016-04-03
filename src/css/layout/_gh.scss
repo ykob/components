@@ -1,2 +1,13 @@
 .l-gh {
+  margin: 60px 0;
+  &__site-title {
+    @include fontSize(42);
+    text-align: center;
+    letter-spacing: 5px;
+  }
+  &__description {
+    @include fontSize(18);
+    text-align: center;
+    letter-spacing: 3px;
+  }
 }
