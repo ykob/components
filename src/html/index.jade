@@ -7,20 +7,14 @@
 doctype html
 html(lang="ja")
   head
-    include ./modules/_head.jade
+    include ./layout/_head.jade
   body.index
     .l-page
-      include ./modules/_l-gh.jade
+      include ./layout/_l-gh.jade
       .l-page__btns
-        .c-btn-slideup
-          a(href="#")
-            .c-btn-slideup__body
-              |slide up
-            .c-btn-slideup__bg
-        .c-btn-slidedown
-          a(href="#")
-            .c-btn-slidedown__body
-              |slide down
-            .c-btn-slidedown__bg
-      include ./modules/_l-gf.jade
+        include ./modules/_btn-slideup.jade
+        include ./modules/_btn-slidedown.jade
+        include ./modules/_btn-slideleft.jade
+        include ./modules/_btn-slideright.jade
+      include ./layout/_l-gf.jade
     script(src="js/main.js")
