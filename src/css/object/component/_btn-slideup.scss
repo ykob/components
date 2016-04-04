@@ -15,6 +15,14 @@
     z-index: 2;
     color: $black;
   }
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    z-index: 2;
+    margin-top: -6px;
+    @include icon('../img/arrow_black.svg', 8px, 12px, block);
+  }
   &__bg {
     position: absolute;
     top: 100%;
@@ -30,6 +38,10 @@
     transition-duration: 0.4s;
     transition-timing-function: cubic-bezier(.1, .5, .2, .9);
   }
+  &__icon {
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(.1, .5, .2, .9);
+  }
   &__bg {
     transition-duration: 0.4s;
     transition-timing-function: cubic-bezier(.1, .5, .2, .9);
@@ -41,6 +53,9 @@
     .c-btn-slideup {
       &__body {
         color: $white;
+      }
+      &__icon {
+        @include icon('../img/arrow_white.svg', 8px, 12px, block);
       }
       &__bg {
         top: 0;
