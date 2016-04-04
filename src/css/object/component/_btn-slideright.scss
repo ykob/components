@@ -1,14 +1,21 @@
 .c-btn-slideright {
   width: 300px;
   display: inline-block;
+  vertical-align: top;
   margin: 1em;
-  a {
+  a, button {
+    width: 300px;
+    box-sizing: border-box;
     display: block;
+    overflow: hidden;
     position: relative;
     padding: 1em;
     border: 2px solid $black;
     border-radius: 4px;
     text-decoration: none;
+  }
+  button {
+    background: none;
   }
   &__body {
     position: relative;
