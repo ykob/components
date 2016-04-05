@@ -1,19 +1,20 @@
-@keyframes reeldown {
+@keyframes reelside {
   0% {
-    top: 50%;
+    right: 20px;
   }
   49.9% {
-    top: 120%;
+    right: -20px;
   }
   50% {
-    top: -20%;
+    right: auto;
+    left: -20px;
   }
   100% {
-    top: 50%;
+    left: 20px;
   }
 }
 
-.c-btn-reeldown {
+.c-btn-reelside {
   width: 300px;
   display: inline-block;
   vertical-align: top;
@@ -71,14 +72,15 @@
   //  Animation Set
   //
   a:hover, button:hover {
-    .c-btn-reeldown {
+    .c-btn-reelside {
       &__body {
         color: $white;
       }
       &__icon {
-        animation-name: reeldown;
+        animation-name: reelside;
         animation-duration: 0.6s;
         animation-timing-function: cubic-bezier(.8, .0, .2, 1);
+        animation-fill-mode: forwards;
         @include icon('../img/arrow_white.svg', 8px, 12px, block);
       }
       &__bg {
