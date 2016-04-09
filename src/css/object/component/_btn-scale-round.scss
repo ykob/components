@@ -1,0 +1,74 @@
+.c-btn-scale-round {
+  width: 300px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 1em;
+  a, button {
+    width: 300px;
+    box-sizing: border-box;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    padding: 1em;
+    border: 2px solid $black;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  button {
+    background: none;
+  }
+  &__body {
+    position: relative;
+    z-index: 2;
+    color: $black;
+  }
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    z-index: 2;
+    margin-top: -6px;
+    @include icon('../img/arrow_black.svg', 8px, 12px, block);
+  }
+  &__bg {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+    border-radius: 25px;
+    background-color: $black;
+  }
+  //
+  //  Animation Init
+  //
+  &__body {
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(.1, .5, .2, .9);
+  }
+  &__bg {
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.2s, transform 0.4s;
+    transition-timing-function: cubic-bezier(.1, .5, .2, .9);
+  }
+  //
+  //  Animation Set
+  //
+  a:hover {
+    .c-btn-scale-round {
+      &__body {
+        color: $white;
+      }
+      &__icon {
+        @include icon('../img/arrow_white.svg', 8px, 12px, block);
+      }
+      &__bg {
+        opacity: 1;
+        transform: scale(7);
+      }
+    }
+  }
+}
