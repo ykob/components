@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "domain": "http://ykob.github.io/components",
+    "websiteName": "components",
+    "keywords": "",
+    "themeColor": "#ffffff"
+  },
+  "pages": {
+    "index": {
+      "id": "index",
+      "title": "",
+      "keywords": "",
+      "description": "there are components that can be used general purpose on website.",
+      "path": "/",
+      "ogpImg": "ogp.jpg"
+    }
+  }
+}
