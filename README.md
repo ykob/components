@@ -1,2 +1,3 @@
-# effective-parts
-a list of effective css3 parts to be used for web site.
+# components
+
+there are components that can be used general purpose on website.
