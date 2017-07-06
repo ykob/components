@@ -6,4 +6,18 @@
   @include l-mobile {
     margin-bottom: 40px;
   }
+  &__view-source {
+    @include l-more-than-mobile {
+      margin-top: 20px;
+    }
+    @include l-mobile {
+      margin-top: 10px;
+    }
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 0.5em;
+    }
+  }
+
 }

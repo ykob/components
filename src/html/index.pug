@@ -10,8 +10,16 @@ block contentStatic
   h1.p-global-header
     +iconComponent(40)
     |Components
-  p.p-global-excerpt
-    |they are components what can be used general purpose on website.
+  .p-global-excerpt
+    p
+      |they are components what can be used general purpose on website.
+    .p-global-excerpt__view-source
+      +iconGitHub(20)
+      a.c-text-link-underline.js-hover(
+        href = 'https://github.com/ykob/components',
+        target = '_blank'
+        )
+        |view source
 
   .c-section
     h2.c-section-header
