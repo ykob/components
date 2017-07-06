@@ -4,4 +4,10 @@
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  @include l-more-than-mobile {
+    margin-bottom: 80px;
+  }
+  @include l-mobile {
+    margin-bottom: 40px;
+  }
 }

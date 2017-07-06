@@ -1,3 +1,12 @@
 .l-contents {
   overflow: hidden;
+  @include fontSize(13);
+  @include l-more-than-mobile {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  @include l-mobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }

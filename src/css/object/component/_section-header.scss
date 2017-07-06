@@ -1,0 +1,12 @@
+.c-section-header {
+  @include flexFontSize(2);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  @include l-more-than-mobile {
+    margin-bottom: 40px;
+  }
+  @include l-mobile {
+    margin-bottom: 20px;
+  }
+}
