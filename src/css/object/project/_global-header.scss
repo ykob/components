@@ -1,0 +1,7 @@
+.p-global-header {
+  margin: 0;
+  @include flexFontSize(3);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
