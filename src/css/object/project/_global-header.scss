@@ -1,13 +1,28 @@
 .p-global-header {
   margin: 0;
-  @include flexFontSize(3);
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   @include l-more-than-mobile {
     margin-bottom: 80px;
+    @include fontSize(40);
   }
   @include l-mobile {
     margin-bottom: 40px;
+    @include fontSize(24);
+  }
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.3em;
+    margin-bottom: 0.2em;
+    @include l-more-than-mobile {
+      width: 40px;
+      height: 40px;
+    }
+    @include l-mobile {
+      width: 28px;
+      height: 28px;
+    }
   }
 }
