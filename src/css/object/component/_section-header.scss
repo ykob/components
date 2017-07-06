@@ -5,8 +5,10 @@
   letter-spacing: 0.2em;
   @include l-more-than-mobile {
     margin-bottom: 40px;
+    @include fontSize(28);
   }
   @include l-mobile {
     margin-bottom: 20px;
+    @include fontSize(16);
   }
 }
