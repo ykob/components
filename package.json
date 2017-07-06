@@ -48,6 +48,7 @@
   },
   "dependencies": {
     "js-util": "git://github.com/ykob/js-util.git",
-    "jstransformer-markdown-it": "^2.0.0"
+    "jstransformer-markdown-it": "^2.0.0",
+    "vue": "^2.3.4"
   }
 }
