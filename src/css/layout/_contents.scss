@@ -1,6 +1,7 @@
 .l-contents {
   overflow: hidden;
-  @include fontSize(13);
+  @include fontSize(14);
+  letter-spacing: 0.1em;
   @include l-more-than-mobile {
     padding-top: 80px;
     padding-bottom: 80px;
