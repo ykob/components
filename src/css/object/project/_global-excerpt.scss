@@ -1,0 +1,9 @@
+.p-global-excerpt {
+  text-align: center;
+  @include l-more-than-mobile {
+    margin-bottom: 80px;
+  }
+  @include l-mobile {
+    margin-bottom: 40px;
+  }
+}
