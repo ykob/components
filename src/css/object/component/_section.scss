@@ -1,3 +1,8 @@
 .c-section {
-  margin-bottom: 100px;
+  @include l-more-than-mobile {
+    margin-bottom: 80px;
+  }
+  @include l-mobile {
+    margin-bottom: 40px;
+  }
 }
