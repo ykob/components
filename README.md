@@ -1,3 +1,4 @@
 # components
 
-there are components that can be used general purpose on website.
+they are components what can be used general purpose on website.  
+http://ykob.github.io/components/
