@@ -1,0 +1,48 @@
+@keyframes drawStrike {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+@keyframes removeStrike {
+  0% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+.c-text-link-strike {
+  display: inline-block;
+  position: relative;
+  color: $color-text-black;
+  text-decoration: none;
+  &:before {
+    height: 1px;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%; right: -2px; left: -2px;
+    background-color: #000;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+  }
+  &.is-over {
+    &:before {
+      animation-name: drawStrike;
+    }
+  }
+  &.is-leave {
+    &:before {
+      animation-name: removeStrike;
+    }
+  }
+}

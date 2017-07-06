@@ -15,7 +15,7 @@ block contentStatic
       |Hamburger
 
     .c-flex-wrap#hamburger
-      .c-hamburger.js-hover(
+      .c-flex-wrap__item.c-hamburger.js-hover(
         :class = '{ "is-opened-navi" : isOpenedNavi }'
         @click = 'toggleNavi',
         )
@@ -35,7 +35,7 @@ block contentStatic
       |button
 
     .c-flex-wrap
-      a.c-button-border.js-scroll-item.js-hover(
+      a.c-flex-wrap__item.c-button-border.js-scroll-item.js-hover(
         href = '#'
         )
         span.c-button-border__label
@@ -48,9 +48,13 @@ block contentStatic
       |Text Link
 
     .c-flex-wrap
-      a.c-text-link-underline.js-hover(
+      a.c-flex-wrap__item.c-text-link-strike.js-hover(
         href = "#"
         )
         |text link strike
+      a.c-flex-wrap__item.c-text-link-underline.js-hover(
+        href = "#"
+        )
+        |text link underline
 
 block contentFixedAfter
