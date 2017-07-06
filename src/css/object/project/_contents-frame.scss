@@ -1,0 +1,25 @@
+.p-contents-frame {
+  pointer-events: none;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: 10000;
+  transform: translate3d(0, 0, 0);
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+  }
+  @include l-more-than-mobile {
+    border: 5px solid #fff;
+    &:after {
+      border: 5px solid #000;
+    }
+  }
+  @include l-mobile {
+    border: 3px solid #fff;
+    &:after {
+      border: 3px solid #000;
+    }
+  }
+}
