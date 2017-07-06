@@ -1,0 +1,158 @@
+.c-hamburger {
+  width: 40px;
+  height: 40px;
+  display: block;
+  cursor: pointer;
+  position: relative;
+  &__line {
+    width: 24px;
+    height: 2px;
+    overflow: hidden;
+    position: absolute;
+    &-in {
+      width: 72px;
+      height: 2px;
+      position: absolute;
+      top: 0; left: 0;
+      &:before, &:after {
+        width: 24px;
+        height: 2px;
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        background-color: #000;
+      }
+      &:before {
+        left: -48px;
+      }
+      &:after {
+        left: 0;
+      }
+    }
+    &--01 {
+      top: 11px; left: 9px;
+    }
+    &--02 {
+      top: 19px; left: 9px;
+    }
+    &--03 {
+      top: 27px; left: 9px;
+    }
+    &--cross01, &--cross02 {
+      top: 19px; left: 9px;
+    }
+    &--cross01 {
+      transform: rotate(45deg);
+    }
+    &--cross02 {
+      transform: rotate(-45deg);
+    }
+  }
+  //
+  // Interaction
+  //
+  &__line {
+    transition-duration: 0.6s;
+    transition-timing-function: $easeOutExpo;
+    &-in {
+      transition-duration: 0.6s;
+      transition-timing-function: $easeOutExpo;
+      &:before, &:after {
+        transition-timing-function: $easeOutExpo;
+        transition-property: transform;
+      }
+      &--cross01, &--cross02 {
+        transform: translateX(-33.3%);
+      }
+      &--01 {
+        transition-delay: 0.2s;
+      }
+      &--02 {
+        transition-delay: 0.25s;
+        &:before, &:after {
+          transition-delay: 0.05s;
+        }
+      }
+      &--03 {
+        transition-delay: 0.3s;
+        &:before, &:after {
+          transition-delay: 0.1s;
+        }
+      }
+      &--cross01 {
+        transition-delay: 0.0s;
+      }
+      &--cross02 {
+        transition-delay: 0.05s;
+        &:before, &:after {
+          transition-delay: 0.1s;
+        }
+      }
+    }
+  }
+  &.is-opened-navi & {
+    &__line {
+      &-in {
+        &:before, &:after {
+        }
+        &--01, &--02, &--03 {
+          transform: translateX(33.3%);
+        }
+        &--cross01, &--cross02 {
+          transform: translateX(0);
+        }
+        &--01 {
+          transition-delay: 0s;
+        }
+        &--02 {
+          transition-delay: 0.05s;
+        }
+        &--03 {
+          transition-delay: 0.1s;
+        }
+        &--cross01 {
+          transition-delay: 0.25s;
+        }
+        &--cross02 {
+          transition-delay: 0.3s;
+        }
+      }
+    }
+  }
+  &:hover & {
+    &__line {
+      &-in {
+        &:before, &:after {
+          transform: translateX(200%);
+        }
+        &--01, &--02, &--03 {
+          &:before, &:after {
+            transition-duration: 1s;
+          }
+        }
+        &--cross01, &--cross02 {
+          &:before, &:after {
+            transition-duration: 0s;
+          }
+        }
+      }
+    }
+  }
+  &.is-opened-navi:hover & {
+    &__line {
+      &-in {
+        &--cross01, &--cross02 {
+          &:before, &:after {
+            transition-duration: 1s;
+          }
+        }
+        &--01, &--02, &--03 {
+          &:before, &:after {
+            transition-duration: 0s;
+          }
+        }
+      }
+    }
+  }
+}
