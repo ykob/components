@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>components</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <meta name="description" content="they are components what can be used general purpose on website.">
+    <meta name="keywords" content="">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/components/img/common/ms_tileimage.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <link rel="shortcut icon" href="/components/img/common/icon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/components/img/common/app_icon.png">
+    <link rel="stylesheet" href="/components/css/main.css">
+    <meta property="og:title" content="components">
+    <meta property="og:site_name" content="components">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="they are components what can be used general purpose on website.">
+    <meta property="og:url" content="http://ykob.github.io/components/">
+    <meta property="og:image" content="http://ykob.github.io/components/img/common/ogp.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="components">
+    <meta name="twitter:description" content="they are components what can be used general purpose on website.">
+    <meta name="twitter:image" content="http://ykob.github.io/components/img/common/ogp.png">
+  </head>
+  <body>
+    <div class="l-page" data-page-id="index">
+      <div class="l-contents">
+        <h1 class="p-global-header">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 26 26">
+            <path d="M16 5.5v-3c0-.55.45-1 1-1h4c.55 0 1 .45 1 1v3h-6zM4 5.5v-3c0-.55.45-1 1-1h4c.55 0 1 .45 1 1v3H4zM26 21.5c0 1.657-1.344 3-3 3H3c-1.656 0-3-1.343-3-3v-12c0-1.657 1.344-3 3-3h20c1.656 0 3 1.343 3 3v12z"></path>
+          </svg>Components
+        </h1>
+        <div class="p-global-excerpt">
+          <p>they are components what can be used general purpose on website.</p>
+          <div class="p-global-excerpt__view-source">
+            <svg width="20" height="19.50920245398773" viewBox="0 0 32.6 31.8">
+              <path d="M16.3 0C7.3 0 0 7.3 0 16.3c0 7.2 4.7 13.3 11.1 15.5.8.1 1.1-.4 1.1-.8v-2.8c-4.5 1-5.5-2.2-5.5-2.2-.7-1.9-1.8-2.4-1.8-2.4-1.5-1 .1-1 .1-1 1.6.1 2.5 1.7 2.5 1.7 1.5 2.5 3.8 1.8 4.7 1.4.1-1.1.6-1.8 1-2.2-3.6-.4-7.4-1.8-7.4-8.1 0-1.8.6-3.2 1.7-4.4-.1-.3-.7-2 .2-4.2 0 0 1.4-.4 4.5 1.7 1.3-.4 2.7-.5 4.1-.5 1.4 0 2.8.2 4.1.5 3.1-2.1 4.5-1.7 4.5-1.7.9 2.2.3 3.9.2 4.3 1 1.1 1.7 2.6 1.7 4.4 0 6.3-3.8 7.6-7.4 8 .6.5 1.1 1.5 1.1 3V31c0 .4.3.9 1.1.8 6.5-2.2 11.1-8.3 11.1-15.5C32.6 7.3 25.3 0 16.3 0z"></path>
+            </svg><a class="c-text-link-underline js-hover" href="https://github.com/ykob/components" target="_blank">view source</a>
+          </div>
+        </div>
+        <div class="c-section">
+          <h2 class="c-section-header">Hamburger</h2>
+          <div class="c-flex-wrap" id="hamburger">
+            <div class="c-flex-wrap__item c-hamburger js-hover" :class="{ &quot;is-opened-navi&quot; : isOpenedNavi }" @click="toggleNavi">
+              <div class="c-hamburger__line c-hamburger__line--01">
+                <div class="c-hamburger__line-in c-hamburger__line-in--01"></div>
+              </div>
+              <div class="c-hamburger__line c-hamburger__line--02">
+                <div class="c-hamburger__line-in c-hamburger__line-in--02"></div>
+              </div>
+              <div class="c-hamburger__line c-hamburger__line--03">
+                <div class="c-hamburger__line-in c-hamburger__line-in--03"></div>
+              </div>
+              <div class="c-hamburger__line c-hamburger__line--cross01">
+                <div class="c-hamburger__line-in c-hamburger__line-in--cross01"></div>
+              </div>
+              <div class="c-hamburger__line c-hamburger__line--cross02">
+                <div class="c-hamburger__line-in c-hamburger__line-in--cross02"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="c-section">
+          <h2 class="c-section-header">button</h2>
+          <div class="c-flex-wrap"><a class="c-flex-wrap__item c-button-border js-scroll-item js-hover" href="#"><span class="c-button-border__label">Read More</span><span class="c-button-border__line-v"></span><span class="c-button-border__line-h"></span></a><a class="c-flex-wrap__item c-button-border-v js-scroll-item js-hover" href="#"><span class="c-button-border-v__label">Read More</span><span class="c-button-border-v__line-v"></span><span class="c-button-border-v__line-h"></span></a></div>
+        </div>
+        <div class="c-section">
+          <h2 class="c-section-header">Text Link</h2>
+          <div class="c-flex-wrap"><a class="c-flex-wrap__item c-text-link-strike js-hover" href="#">text link strike</a><a class="c-flex-wrap__item c-text-link-underline js-hover" href="#">text link underline</a></div>
+        </div>
+      </div>
+      <div class="p-contents-frame"></div>
+    </div>
+    <script src="/components/js/main.js"></script>
+  </body>
+</html>
