@@ -1,12 +1,12 @@
 // 設定ファイル
 // 対象パスやオプションを指定
 
-const DOMAIN = module.exports.DOMAIN = 'http://www.xxx.com';
+const DOMAIN = module.exports.DOMAIN = 'http://ykob.github.io';
 const DIR = module.exports.DIR =  {
-  PATH: '',
+  PATH: '/components',
   SRC: 'src',
   DEST: 'dst',
-  BUILD: 'build'
+  BUILD: 'docs'
 };
 
 module.exports.serve = {
@@ -88,14 +88,14 @@ module.exports.replace = {
     src: [
       `${DIR.DEST}${DIR.PATH}/**/*.html`
     ],
-    dest: `${DIR.BUILD}${DIR.PATH}`,
+    dest: `${DIR.BUILD}`,
     path: `${DIR.PATH}`
   }
 };
 
 module.exports.cleanCss = {
   src: `${DIR.DEST}${DIR.PATH}/css/main.css`,
-  dest: `${DIR.BUILD}${DIR.PATH}/css`
+  dest: `${DIR.BUILD}/css`
 };
 
 module.exports.uglify = {
@@ -103,7 +103,7 @@ module.exports.uglify = {
     `./${DIR.DEST}${DIR.PATH}/js/vendor.js`,
     `./${DIR.DEST}${DIR.PATH}/js/main.js`,
   ],
-  dest: `${DIR.BUILD}${DIR.PATH}/js`,
+  dest: `${DIR.BUILD}/js`,
   opts: {
     preserveComments: 'some'
   }
@@ -137,7 +137,7 @@ module.exports.imagemin = {
   src: [
     `${DIR.DEST}${DIR.PATH}/**/*.{jpg,jpeg,png,gif,svg}`
   ],
-  dest: `${DIR.BUILD}${DIR.PATH}/img`
+  dest: `${DIR.BUILD}/img`
 };
 
 module.exports.clean = {
