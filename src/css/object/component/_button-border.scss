@@ -70,19 +70,6 @@
     &:before { top: 0; }
     &:after { bottom: 0; }
   }
-  &--utility {
-    color: #999;
-    &:after {
-      background-color: #999;
-    }
-  }
-  &--utility & {
-    &__line-v, &__line-h {
-      &:before, &:after {
-        background-color: #999;
-      }
-    }
-  }
   //
   // Interaction
   //
