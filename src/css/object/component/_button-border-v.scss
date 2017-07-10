@@ -36,9 +36,6 @@
     display: inline-block;
     position: relative;
     z-index: 10;
-    &--footer {
-      color: #fff;
-    }
   }
   &__line-v, &__line-h {
     &:before, &:after {
@@ -47,11 +44,6 @@
       position: absolute;
       z-index: 10;
       background-color: #000;
-    }
-    &--footer {
-      &:before, &:after {
-        background-color: #666;
-      }
     }
   }
   &__line-v {
