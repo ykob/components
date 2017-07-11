@@ -1,11 +1,20 @@
 .c-flex-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
   margin-top: 20px;
+  @include l-more-than-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  @include l-mobile {
+  }
   &__item {
-    margin-right: 20px;
-    margin-left: 20px;
+    @include l-more-than-mobile {
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+    @include l-mobile {
+      margin-top: 20px;
+    }
   }
 }
