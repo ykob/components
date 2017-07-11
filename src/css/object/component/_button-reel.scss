@@ -12,10 +12,10 @@
   letter-spacing: 0.2em;
   background: none;
   @include l-more-than-mobile {
-    width: 220px;
+    width: 240px;
   }
   @include l-mobile {
-    width: 160px;
+    width: 220px;
   }
   &__label {
     display: inline-block;

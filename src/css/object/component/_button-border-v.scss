@@ -11,12 +11,12 @@
   letter-spacing: 0.2em;
   background: none;
   @include l-more-than-mobile {
-    width: 220px;
+    width: 240px;
     padding-top: 20px;
     padding-bottom: 22px;
   }
   @include l-mobile {
-    width: 160px;
+    width: 220px;
     padding-top: 18px;
     padding-bottom: 18px;
   }
