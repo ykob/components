@@ -11,13 +11,13 @@
   letter-spacing: 0.2em;
   background: none;
   @include l-more-than-mobile {
-    width: 220px;
+    width: 240px;
     padding-top: 20px;
     padding-bottom: 22px;
   }
   @include l-mobile {
-    width: 160px;
-    padding-top: 16px;
+    width: 220px;
+    padding-top: 18px;
     padding-bottom: 18px;
   }
   &:before, &:after {
@@ -36,9 +36,6 @@
     display: inline-block;
     position: relative;
     z-index: 10;
-    &--footer {
-      color: #fff;
-    }
   }
   &__line-v, &__line-h {
     &:before, &:after {
@@ -47,11 +44,6 @@
       position: absolute;
       z-index: 10;
       background-color: #000;
-    }
-    &--footer {
-      &:before, &:after {
-        background-color: #666;
-      }
     }
   }
   &__line-v {
@@ -69,19 +61,6 @@
     }
     &:before { top: 0; }
     &:after { bottom: 0; }
-  }
-  &--utility {
-    color: #999;
-    &:after {
-      background-color: #999;
-    }
-  }
-  &--utility & {
-    &__line-v, &__line-h {
-      &:before, &:after {
-        background-color: #999;
-      }
-    }
   }
   //
   // Interaction

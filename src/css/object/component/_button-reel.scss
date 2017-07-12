@@ -1,7 +1,8 @@
-.c-button-border {
+.c-button-reel {
   box-sizing: border-box;
   display: block;
   line-height: 1.1;
+  overflow: hidden;
   position: relative;
   border: 0;
   color: #000;
@@ -12,30 +13,30 @@
   background: none;
   @include l-more-than-mobile {
     width: 240px;
-    padding-top: 20px;
-    padding-bottom: 22px;
   }
   @include l-mobile {
     width: 220px;
-    padding-top: 18px;
-    padding-bottom: 18px;
-  }
-  &:before, &:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-  }
-  &:before {
-    background-color: #fff;
-  }
-  &:after {
-    background-color: #000;
   }
   &__label {
     display: inline-block;
     position: relative;
     z-index: 10;
+    &:after {
+      content: attr(data-label);
+      display: block;
+      position: absolute;
+      bottom: 100%; right: 0; left: 0;
+    }
+    &, &:after {
+      @include l-more-than-mobile {
+        padding-top: 20px;
+        padding-bottom: 22px;
+      }
+      @include l-mobile {
+        padding-top: 18px;
+        padding-bottom: 18px;
+      }
+    }
   }
   &__line-v, &__line-h {
     &:before, &:after {
@@ -66,9 +67,9 @@
   // Interaction
   //
   &__label {
-    opacity: 0;
+    transform: translateY(-100%);
     transition-duration: 0.3s;
-    transition-property: color, opacity;
+    transition-property: transform;
   }
   &__line-v, &__line-h {
     &:before, &:after {
@@ -101,23 +102,10 @@
       transform-origin: right;
     }
   }
-  &:before {
-    opacity: 0;
-    transition-duration: 0.6s;
-    transition-delay: 0.2s;
-    transition-property: opacity;
-  }
-  &:after {
-    transform: scaleX(0);
-    transform-origin: left;
-    transition-duration: 0.3s;
-    transition-timing-function: $easeOutCirc;
-    transition-property: transform;
-  }
   &.is-shown & {
     &__label {
-      opacity: 1;
-      transition-delay: 0.2s;
+      transform: translateY(0%);
+      transition-delay: 0.4s;
     }
     &__line-v {
       &:before, &:after {
@@ -130,31 +118,17 @@
       }
     }
   }
-  &.is-shown {
-    &:before {
-      opacity: 1;
-    }
-  }
   &.is-over & {
     &__label {
-      color: #fff;
+      transform: translateY(100%);
       transition-delay: 0s;
-    }
-  }
-  &.is-over {
-    &:after {
-      transform: scaleX(1);
     }
   }
   &.is-leave & {
     &__label {
+      transform: translateY(0%);
+      transition-duration: 0s;
       transition-delay: 0s;
-    }
-  }
-  &.is-leave {
-    &:after {
-      transform-origin: right;
-      transform: scaleX(0);
     }
   }
 }
