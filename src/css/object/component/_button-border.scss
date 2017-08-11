@@ -110,7 +110,6 @@
   &:after {
     transform: scaleX(0);
     transform-origin: left;
-    transition-duration: 0.3s;
     transition-timing-function: $easeOutCirc;
     transition-property: transform;
   }
@@ -144,6 +143,7 @@
   &.is-over {
     &:after {
       transform: scaleX(1);
+      transition-duration: 0.3s;
     }
   }
   &.is-leave & {
@@ -155,6 +155,7 @@
     &:after {
       transform-origin: right;
       transform: scaleX(0);
+      transition-duration: 0.3s;
     }
   }
 }
