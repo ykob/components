@@ -29,3 +29,17 @@ mixin buttonReel(tag)
       block
     span.c-button-reel__line-v
     span.c-button-reel__line-h
+
+mixin textLinkStrike(tag)
+  #{tag}.c-text-link-strike.js-hover(
+    href = attributes.href,
+    class = attributes.className
+    )
+    block
+
+mixin textLinkUnderline(tag)
+  #{tag}.c-text-link-underline.js-hover(
+    href = attributes.href,
+    class = attributes.className
+    )
+    block

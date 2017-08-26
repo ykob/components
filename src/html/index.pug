@@ -69,12 +69,14 @@ block contentStatic
       |Text Link
 
     .c-flex-wrap
-      a.c-flex-wrap__item.c-text-link-strike.js-hover(
-        href = "#"
+      +textLinkStrike('a')(
+        href = "#",
+        className = 'c-flex-wrap__item'
         )
         |text link strike
-      a.c-flex-wrap__item.c-text-link-underline.js-hover(
-        href = "#"
+      +textLinkUnderline('a')(
+        href = "#",
+        className = 'c-flex-wrap__item'
         )
         |text link underline
 
