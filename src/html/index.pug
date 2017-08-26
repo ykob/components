@@ -46,25 +46,23 @@ block contentStatic
       |button
 
     .c-flex-wrap
-      +buttonBorder('a', '#')(
+      +buttonBorder('a')(
+        href = '#',
         className = 'c-flex-wrap__item'
         )
         |Button Border
-      +buttonBorderV('a', '#')(
+      +buttonBorderV('a')(
+        href = '#',
         className = 'c-flex-wrap__item'
         )
         |Button Border V
 
     .c-flex-wrap
-      a.c-flex-wrap__item.c-button-reel.js-scroll-item.js-hover(
-        href = '#'
+      +buttonReel('a')(
+        href = '#',
+        className = 'c-flex-wrap__item'
         )
-        span.c-button-reel__label(
-          data-label = 'Button Reel'
-          )
-          |Button Reel
-        span.c-button-reel__line-v
-        span.c-button-reel__line-h
+        |Button Reel
 
   .c-section
     h2.c-section-header

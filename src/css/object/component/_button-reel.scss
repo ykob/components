@@ -7,6 +7,7 @@
   border: 0;
   color: #000;
   font-weight: 700;
+  text-decoration: none;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -18,24 +19,21 @@
     width: 220px;
   }
   &__label {
-    display: inline-block;
+    display: block;
     position: relative;
     z-index: 10;
-    &:after {
-      content: attr(data-label);
+    @include l-more-than-mobile {
+      padding-top: 20px;
+      padding-bottom: 22px;
+    }
+    @include l-mobile {
+      padding-top: 18px;
+      padding-bottom: 18px;
+    }
+    &--over {
       display: block;
       position: absolute;
       bottom: 100%; right: 0; left: 0;
-    }
-    &, &:after {
-      @include l-more-than-mobile {
-        padding-top: 20px;
-        padding-bottom: 22px;
-      }
-      @include l-mobile {
-        padding-top: 18px;
-        padding-bottom: 18px;
-      }
     }
   }
   &__line-v, &__line-h {
