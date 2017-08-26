@@ -1,8 +1,19 @@
 mixin buttonBorder(tag, href)
   #{tag}.c-button-border.js-scroll-item.js-hover(
-    href = href
+    href = href,
+    class = attributes.className
     )
     span.c-button-border__label
       block
     span.c-button-border__line-v
     span.c-button-border__line-h
+
+mixin buttonBorderV(tag, href)
+  #{tag}.c-button-border-v.js-scroll-item.js-hover(
+    href = href,
+    class = attributes.className
+    )
+    span.c-button-border-v__label
+      block
+    span.c-button-border-v__line-v
+    span.c-button-border-v__line-h

@@ -46,15 +46,14 @@ block contentStatic
       |button
 
     .c-flex-wrap
-      +buttonBorder('a', '#')
-        |Button Border
-      a.c-flex-wrap__item.c-button-border-v.js-scroll-item.js-hover(
-        href = '#'
+      +buttonBorder('a', '#')(
+        className = 'c-flex-wrap__item'
         )
-        span.c-button-border-v__label
-          |Button Border V
-        span.c-button-border-v__line-v
-        span.c-button-border-v__line-h
+        |Button Border
+      +buttonBorderV('a', '#')(
+        className = 'c-flex-wrap__item'
+        )
+        |Button Border V
 
     .c-flex-wrap
       a.c-flex-wrap__item.c-button-reel.js-scroll-item.js-hover(
