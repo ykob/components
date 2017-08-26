@@ -46,13 +46,8 @@ block contentStatic
       |button
 
     .c-flex-wrap
-      a.c-flex-wrap__item.c-button-border.js-scroll-item.js-hover(
-        href = '#'
-        )
-        span.c-button-border__label
-          |Button Border
-        span.c-button-border__line-v
-        span.c-button-border__line-h
+      +buttonBorder('a', '#')
+        |Button Border
       a.c-flex-wrap__item.c-button-border-v.js-scroll-item.js-hover(
         href = '#'
         )
