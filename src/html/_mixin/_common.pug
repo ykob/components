@@ -30,6 +30,19 @@ mixin buttonReel(tag)
     span.c-button-reel__line-v
     span.c-button-reel__line-h
 
+mixin buttonThrough(tag)
+  #{tag}.c-button-through.js-scroll-item.js-hover(
+    href = attributes.href,
+    class = attributes.className
+    )
+    span.c-button-through__label
+      block
+    span.c-button-through__over-label
+      span.c-button-through__over-label-in
+        block
+    span.c-button-through__line-v
+    span.c-button-through__line-h
+
 mixin textLinkStrike(tag)
   #{tag}.c-text-link-strike.js-hover(
     href = attributes.href,
