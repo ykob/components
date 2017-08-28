@@ -1,0 +1,42 @@
+.c-text-link-through {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  color: $color-text-black;
+  text-decoration: none;
+  &__label {
+    display: block;
+  }
+  &__over-label, &__over-label-in {
+    display: block;
+  }
+  &__over-label {
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+    top: 0; left: 0;
+    color: $color-strong;
+    background-color: #fff;
+  }
+  //
+  // Interaction
+  //
+  &__over-label {
+    transform: translateX(-100.5%);
+  }
+  &__over-label-in {
+    transform: translateX(100.5%);
+  }
+  .is-over & {
+    &__over-label, &__over-label-in {
+      transition-duration: 0.8s;
+      transition-property: transform;
+    }
+    &__over-label {
+      transform: translateX(100.5%);
+    }
+    &__over-label-in {
+      transform: translateX(-100.5%);
+    }
+  }
+}

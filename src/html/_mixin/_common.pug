@@ -43,3 +43,14 @@ mixin textLinkUnderline(tag)
     class = attributes.className
     )
     block
+
+mixin textLinkThrough(tag)
+  #{tag}.c-text-link-through.js-hover(
+    href = attributes.href,
+    class = attributes.className
+    )
+    span.c-text-link-through__label
+      block
+    span.c-text-link-through__over-label
+      span.c-text-link-through__over-label-in
+        block
