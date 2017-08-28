@@ -21,6 +21,10 @@
   //
   // Interaction
   //
+  &__over-label, &__over-label-in {
+    transition-duration: 0s;
+    transition-property: transform;
+  }
   &__over-label {
     transform: translateX(-100.5%);
   }
@@ -30,7 +34,6 @@
   .is-over & {
     &__over-label, &__over-label-in {
       transition-duration: 0.8s;
-      transition-property: transform;
     }
     &__over-label {
       transform: translateX(100.5%);
