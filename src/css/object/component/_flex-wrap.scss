@@ -1,20 +1,22 @@
 .c-flex-wrap {
+  max-width: 780px;
   margin-top: 20px;
-  @include l-more-than-mobile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  @include l-mobile {
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-right: auto;
+  margin-left: auto;
   &__item {
     @include l-more-than-mobile {
-      margin-right: 20px;
-      margin-left: 20px;
+      margin-top: 20px;
+      margin-right: 10px;
+      margin-left: 10px;
     }
     @include l-mobile {
-      margin-top: 20px;
+      margin-top: 10px;
+      margin-right: 5px;
+      margin-left: 5px;
     }
   }
 }
