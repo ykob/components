@@ -57,6 +57,13 @@ mixin textLinkUnderline(tag)
     )
     block
 
+mixin textLinkThroughLine(tag)
+  #{tag}.c-text-link-through-line.js-hover(
+    href = attributes.href,
+    class = attributes.className
+    )
+    block
+
 mixin textLinkThrough(tag)
   #{tag}.c-text-link-through.js-hover(
     href = attributes.href,
