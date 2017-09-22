@@ -1,7 +1,15 @@
 mixin buttonBorder(tag)
+  -
+    var classList = '';
+    if (attributes.className) classList += attributes.className;
+    if (attributes.modifier) {
+      for (var i = 0; i < attributes.modifier.length; i++) {
+        classList += ` c-button-border--${attributes.modifier[i]}`;
+      }
+    }
   #{tag}.c-button-border.js-scroll-item.js-hover(
     href = attributes.href,
-    class = attributes.className
+    class = classList
     )
     span.c-button-border__label
       block
