@@ -1,22 +1,26 @@
+$sizeOut: 42px;
+$sizeIn: 24px;
+$lineWidth: 2px;
+
 .c-hamburger {
-  width: 40px;
-  height: 40px;
+  width: $sizeOut;
+  height: $sizeOut;
   display: block;
   cursor: pointer;
   position: relative;
   &__line {
-    width: 24px;
-    height: 2px;
+    width: $sizeIn;
+    height: $lineWidth;
     overflow: hidden;
     position: absolute;
     &-in {
-      width: 72px;
-      height: 2px;
+      width: $sizeIn * 3;
+      height: $lineWidth;
       position: absolute;
       top: 0; left: 0;
       &:before, &:after {
-        width: 24px;
-        height: 2px;
+        width: $sizeIn;
+        height: $lineWidth;
         content: '';
         display: block;
         position: absolute;
@@ -24,23 +28,23 @@
         background-color: #000;
       }
       &:before {
-        left: -48px;
+        left: $sizeIn * -2;
       }
       &:after {
         left: 0;
       }
     }
-    &--01 {
-      top: 11px; left: 9px;
+    &--01, &--02, &--03, &--cross01, &--cross02 {
+      left: ($sizeOut - $sizeIn) / 2;
     }
-    &--02 {
-      top: 19px; left: 9px;
+    &--01 {
+      top: $sizeOut * 0.3 - $lineWidth / 2;
+    }
+    &--02, &--cross01, &--cross02 {
+      top: $sizeOut * 0.5 - $lineWidth / 2;
     }
     &--03 {
-      top: 27px; left: 9px;
-    }
-    &--cross01, &--cross02 {
-      top: 19px; left: 9px;
+      top: $sizeOut * 0.7 - $lineWidth / 2;
     }
     &--cross01 {
       transform: rotate(45deg);
