@@ -67,7 +67,7 @@
   //
   &__label {
     opacity: 0;
-    transition-duration: 0s;
+    transition-duration: 0.3s;
     transition-property: color, opacity;
   }
   &__line-v, &__line-h {
@@ -149,7 +149,6 @@
   }
   &.is-leave & {
     &__label {
-      transition-duration: 0.3s;
       transition-delay: 0s;
     }
   }
