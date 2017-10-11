@@ -65,6 +65,7 @@
   //
   // Interaction
   //
+  pointer-events: none;
   &__label {
     opacity: 0;
     transition-duration: 0.3s;
@@ -130,6 +131,7 @@
     }
   }
   &.is-shown {
+    pointer-events: auto;
     &:before {
       opacity: 1;
     }

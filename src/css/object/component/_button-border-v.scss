@@ -65,6 +65,7 @@
   //
   // Interaction
   //
+  pointer-events: none;
   &__label {
     opacity: 0;
     transition-duration: 0.3s;
@@ -112,6 +113,9 @@
     transform-origin: bottom;
     transition-timing-function: $easeOutCirc;
     transition-property: transform;
+  }
+  &.is-shown {
+    pointer-events: auto;
   }
   &.is-shown & {
     &__label {

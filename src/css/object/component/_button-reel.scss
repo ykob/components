@@ -64,6 +64,7 @@
   //
   // Interaction
   //
+  pointer-events: none;
   &__label {
     transform: translateY(-100%);
     transition-duration: 0.3s;
@@ -99,6 +100,9 @@
     &:after {
       transform-origin: right;
     }
+  }
+  &.is-shown {
+    pointer-events: auto;
   }
   &.is-shown & {
     &__label {
