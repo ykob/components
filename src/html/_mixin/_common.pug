@@ -1,20 +1,42 @@
 mixin buttonBorder(tag)
   -
-    var classList = '';
-    if (attributes.className) classList += attributes.className;
+    var classList = {
+      parent: '',
+      label: '',
+      lineV: '',
+      lineH: ''
+    };
+    if (attributes.className) classList.parent += attributes.className;
     if (attributes.modifier) {
+      if (classList.parent.length > 0) classList.parent += ' ';
       for (var i = 0; i < attributes.modifier.length; i++) {
-        classList += ` c-button-border--${attributes.modifier[i]}`;
+        if (i > 0) {
+          classList.parent += ' ';
+          classList.label += ' ';
+          classList.lineV += ' ';
+          classList.lineH += ' ';
+        }
+        classList.parent += `c-button-border--${attributes.modifier[i]}`;
+        classList.label += `c-button-border__label--${attributes.modifier[i]}`;
+        classList.lineV += `c-button-border__line-v--${attributes.modifier[i]}`;
+        classList.lineH += `c-button-border__line-h--${attributes.modifier[i]}`;
       }
     }
   #{tag}.c-button-border.js-scroll-item.js-hover(
     href = attributes.href,
-    class = classList
+    target = attributes.target,
+    class = classList.parent
     )
-    span.c-button-border__label
+    span.c-button-border__label(
+      class = classList.label
+      )
       block
-    span.c-button-border__line-v
-    span.c-button-border__line-h
+    span.c-button-border__line-v(
+      class = classList.lineV
+      )
+    span.c-button-border__line-h(
+      class = classList.lineH
+      )
 
 mixin buttonBorderV(tag)
   #{tag}.c-button-border-v.js-scroll-item.js-hover(
