@@ -93,5 +93,14 @@ block contentStatic
         )
         |text link through
 
+  .c-section
+    h2.c-section-header
+      |Video
+
+    .c-flex-wrap
+      +playVideoBorder('div')(
+        className = 'c-flex-wrap__item'
+        )
+
 block contentFixedAfter
   .p-contents-frame
