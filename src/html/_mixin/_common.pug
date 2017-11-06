@@ -105,6 +105,16 @@ mixin textLinkThrough(tag)
       span.c-text-link-through__over-label-in
         block
 
+mixin playVideo(tag)
+  #{tag}.c-play-video.js-hover(
+    href = (attributes.href) ? attributes.href : '',
+    class = (attributes.className) ? attributes.className : '',
+    )
+    svg.c-play-video__icon(
+      width="30" height="30" viewBox="0 0 30 30"
+      )
+      path(d="M30 15L4 0v30")
+
 mixin playVideoBorder(tag)
   #{tag}.c-play-video-border.js-hover(
     href = (attributes.href) ? attributes.href : '',
