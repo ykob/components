@@ -25,6 +25,7 @@ mixin buttonBorder(tag)
   #{tag}.c-button-border.js-scroll-item.js-hover(
     href = attributes.href,
     target = attributes.target,
+    type = attributes.type,
     class = classList.parent
     )
     span.c-button-border__label(
@@ -41,6 +42,8 @@ mixin buttonBorder(tag)
 mixin buttonBorderV(tag)
   #{tag}.c-button-border-v.js-scroll-item.js-hover(
     href = attributes.href,
+    target = attributes.target,
+    type = attributes.type,
     class = attributes.className
     )
     span.c-button-border-v__label
@@ -51,6 +54,8 @@ mixin buttonBorderV(tag)
 mixin buttonReel(tag)
   #{tag}.c-button-reel.js-scroll-item.js-hover(
     href = attributes.href,
+    target = attributes.target,
+    type = attributes.type,
     class = attributes.className
     )
     span.c-button-reel__label
@@ -63,6 +68,8 @@ mixin buttonReel(tag)
 mixin buttonThrough(tag)
   #{tag}.c-button-through.js-scroll-item.js-hover(
     href = attributes.href,
+    target = attributes.target,
+    type = attributes.type,
     class = attributes.className
     )
     span.c-button-through__label
@@ -76,6 +83,7 @@ mixin buttonThrough(tag)
 mixin textLinkStrike(tag)
   #{tag}.c-text-link-strike.js-hover(
     href = attributes.href,
+    target = attributes.target,
     class = attributes.className
     )
     block
@@ -83,6 +91,7 @@ mixin textLinkStrike(tag)
 mixin textLinkUnderline(tag)
   #{tag}.c-text-link-underline.js-hover(
     href = attributes.href,
+    target = attributes.target,
     class = attributes.className
     )
     block
@@ -90,6 +99,7 @@ mixin textLinkUnderline(tag)
 mixin textLinkThroughLine(tag)
   #{tag}.c-text-link-through-line.js-hover(
     href = attributes.href,
+    target = attributes.target,
     class = attributes.className
     )
     block
@@ -97,6 +107,7 @@ mixin textLinkThroughLine(tag)
 mixin textLinkThrough(tag)
   #{tag}.c-text-link-through.js-hover(
     href = attributes.href,
+    target = attributes.target,
     class = attributes.className
     )
     span.c-text-link-through__label
@@ -107,8 +118,9 @@ mixin textLinkThrough(tag)
 
 mixin playVideo(tag)
   #{tag}.c-play-video.js-hover(
-    href = (attributes.href) ? attributes.href : '',
-    class = (attributes.className) ? attributes.className : '',
+    href = attributes.href,
+    target = attributes.target,
+    class = attributes.className,
     )
     svg.c-play-video__icon(
       width="30" height="30" viewBox="0 0 30 30"
@@ -117,8 +129,9 @@ mixin playVideo(tag)
 
 mixin playVideoBorder(tag)
   #{tag}.c-play-video-border.js-hover(
-    href = (attributes.href) ? attributes.href : '',
-    class = (attributes.className) ? attributes.className : '',
+    href = attributes.href : '',
+    target = attributes.target,
+    class = attributes.className : '',
     )
     svg.c-play-video-border__icon(
       width="30" height="30" viewBox="0 0 30 30"
