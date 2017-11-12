@@ -129,9 +129,9 @@ mixin playVideo(tag)
 
 mixin playVideoBorder(tag)
   #{tag}.c-play-video-border.js-hover(
-    href = attributes.href : '',
+    href = attributes.href,
     target = attributes.target,
-    class = attributes.className : '',
+    class = attributes.className,
     )
     svg.c-play-video-border__icon(
       width="30" height="30" viewBox="0 0 30 30"
