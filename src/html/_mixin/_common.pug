@@ -22,7 +22,7 @@ mixin buttonBorder(tag)
         classList.lineH += `c-button-border__line-h--${attributes.modifier[i]}`;
       }
     }
-  #{tag}.c-button-border.js-scroll-item.js-hover(
+  #{tag}.c-button-border(
     href = attributes.href,
     target = attributes.target,
     type = attributes.type,
@@ -40,19 +40,48 @@ mixin buttonBorder(tag)
       )
 
 mixin buttonBorderV(tag)
-  #{tag}.c-button-border-v.js-scroll-item.js-hover(
+  -
+    var classList = {
+      parent: '',
+      label: '',
+      lineV: '',
+      lineH: ''
+    };
+    if (attributes.className) classList.parent += attributes.className;
+    if (attributes.modifier) {
+      if (classList.parent.length > 0) classList.parent += ' ';
+      for (var i = 0; i < attributes.modifier.length; i++) {
+        if (i > 0) {
+          classList.parent += ' ';
+          classList.label += ' ';
+          classList.lineV += ' ';
+          classList.lineH += ' ';
+        }
+        classList.parent += `c-button-border-v--${attributes.modifier[i]}`;
+        classList.label += `c-button-border-v__label--${attributes.modifier[i]}`;
+        classList.lineV += `c-button-border-v__line-v--${attributes.modifier[i]}`;
+        classList.lineH += `c-button-border-v__line-h--${attributes.modifier[i]}`;
+      }
+    }
+  #{tag}.c-button-border-v(
     href = attributes.href,
     target = attributes.target,
     type = attributes.type,
-    class = attributes.className
+    class = classList.parent
     )
-    span.c-button-border-v__label
+    span.c-button-border-v__label(
+      class = classList.label
+      )
       block
-    span.c-button-border-v__line-v
-    span.c-button-border-v__line-h
+    span.c-button-border-v__line-v(
+      class = classList.lineV
+      )
+    span.c-button-border-v__line-h(
+      class = classList.lineH
+      )
 
 mixin buttonReel(tag)
-  #{tag}.c-button-reel.js-scroll-item.js-hover(
+  #{tag}.c-button-reel(
     href = attributes.href,
     target = attributes.target,
     type = attributes.type,
@@ -66,7 +95,7 @@ mixin buttonReel(tag)
     span.c-button-reel__line-h
 
 mixin buttonThrough(tag)
-  #{tag}.c-button-through.js-scroll-item.js-hover(
+  #{tag}.c-button-through(
     href = attributes.href,
     target = attributes.target,
     type = attributes.type,
@@ -81,7 +110,7 @@ mixin buttonThrough(tag)
     span.c-button-through__line-h
 
 mixin textLinkStrike(tag)
-  #{tag}.c-text-link-strike.js-hover(
+  #{tag}.c-text-link-strike(
     href = attributes.href,
     target = attributes.target,
     class = attributes.className
@@ -89,7 +118,7 @@ mixin textLinkStrike(tag)
     block
 
 mixin textLinkUnderline(tag)
-  #{tag}.c-text-link-underline.js-hover(
+  #{tag}.c-text-link-underline(
     href = attributes.href,
     target = attributes.target,
     class = attributes.className
@@ -97,7 +126,7 @@ mixin textLinkUnderline(tag)
     block
 
 mixin textLinkThroughLine(tag)
-  #{tag}.c-text-link-through-line.js-hover(
+  #{tag}.c-text-link-through-line(
     href = attributes.href,
     target = attributes.target,
     class = attributes.className
@@ -105,7 +134,7 @@ mixin textLinkThroughLine(tag)
     block
 
 mixin textLinkThrough(tag)
-  #{tag}.c-text-link-through.js-hover(
+  #{tag}.c-text-link-through(
     href = attributes.href,
     target = attributes.target,
     class = attributes.className
@@ -117,7 +146,7 @@ mixin textLinkThrough(tag)
         block
 
 mixin playVideo(tag)
-  #{tag}.c-play-video.js-hover(
+  #{tag}.c-play-video(
     href = attributes.href,
     target = attributes.target,
     class = attributes.className,
@@ -128,7 +157,7 @@ mixin playVideo(tag)
       path(d="M30 15L4 0v30")
 
 mixin playVideoBorder(tag)
-  #{tag}.c-play-video-border.js-hover(
+  #{tag}.c-play-video-border(
     href = attributes.href,
     target = attributes.target,
     class = attributes.className,
