@@ -81,33 +81,98 @@ mixin buttonBorderV(tag)
       )
 
 mixin buttonReel(tag)
+  -
+    var classList = {
+      parent: '',
+      label: '',
+      lineV: '',
+      lineH: ''
+    };
+    if (attributes.className) classList.parent += attributes.className;
+    if (attributes.modifier) {
+      if (classList.parent.length > 0) classList.parent += ' ';
+      for (var i = 0; i < attributes.modifier.length; i++) {
+        if (i > 0) {
+          classList.parent += ' ';
+          classList.label += ' ';
+          classList.lineV += ' ';
+          classList.lineH += ' ';
+        }
+        classList.parent += `c-button-reel--${attributes.modifier[i]}`;
+        classList.label += `c-button-reel__label--${attributes.modifier[i]}`;
+        classList.lineV += `c-button-reel__line-v--${attributes.modifier[i]}`;
+        classList.lineH += `c-button-reel__line-h--${attributes.modifier[i]}`;
+      }
+    }
   #{tag}.c-button-reel(
     href = attributes.href,
     target = attributes.target,
     type = attributes.type,
-    class = attributes.className
+    class = classList.parent
     )
-    span.c-button-reel__label
+    span.c-button-reel__label(
+      class = classList.label
+      )
       block
-    span.c-button-reel__label.c-button-reel__label--over
+    span.c-button-reel__label.c-button-reel__label--over(
+      class = classList.label
+      )
       block
-    span.c-button-reel__line-v
-    span.c-button-reel__line-h
+    span.c-button-reel__line-v(
+      class = classList.lineV
+      )
+    span.c-button-reel__line-h(
+      class = classList.lineH
+      )
 
 mixin buttonThrough(tag)
+  -
+    var classList = {
+      parent: '',
+      label: '',
+      overLabel: '',
+      lineV: '',
+      lineH: ''
+    };
+    if (attributes.className) classList.parent += attributes.className;
+    if (attributes.modifier) {
+      if (classList.parent.length > 0) classList.parent += ' ';
+      for (var i = 0; i < attributes.modifier.length; i++) {
+        if (i > 0) {
+          classList.parent += ' ';
+          classList.label += ' ';
+          classList.overLabel += ' ';
+          classList.lineV += ' ';
+          classList.lineH += ' ';
+        }
+        classList.parent += `c-button-through--${attributes.modifier[i]}`;
+        classList.label += `c-button-through__label--${attributes.modifier[i]}`;
+        classList.overLabel += `c-button-through__label--${attributes.modifier[i]}`;
+        classList.lineV += `c-button-through__line-v--${attributes.modifier[i]}`;
+        classList.lineH += `c-button-through__line-h--${attributes.modifier[i]}`;
+      }
+    }
   #{tag}.c-button-through(
     href = attributes.href,
     target = attributes.target,
     type = attributes.type,
-    class = attributes.className
+    class = classList.parent
     )
-    span.c-button-through__label
+    span.c-button-through__label(
+      class = classList.label
+      )
       block
-    span.c-button-through__over-label
+    span.c-button-through__over-label(
+      class = classList.over-label
+      )
       span.c-button-through__over-label-in
         block
-    span.c-button-through__line-v
-    span.c-button-through__line-h
+    span.c-button-through__line-v(
+      class = classList.lineV
+      )
+    span.c-button-through__line-h(
+      class = classList.lineH
+      )
 
 mixin textLinkStrike(tag)
   #{tag}.c-text-link-strike(
