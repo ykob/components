@@ -1,0 +1,35 @@
+mixin textLinkStrike(tag)
+  #{tag}.c-text-link-strike(
+    href = attributes.href,
+    target = attributes.target,
+    class = attributes.className
+    )
+    block
+
+mixin textLinkUnderline(tag)
+  #{tag}.c-text-link-underline(
+    href = attributes.href,
+    target = attributes.target,
+    class = attributes.className
+    )
+    block
+
+mixin textLinkThroughLine(tag)
+  #{tag}.c-text-link-through-line(
+    href = attributes.href,
+    target = attributes.target,
+    class = attributes.className
+    )
+    block
+
+mixin textLinkThrough(tag)
+  #{tag}.c-text-link-through(
+    href = attributes.href,
+    target = attributes.target,
+    class = attributes.className
+    )
+    span.c-text-link-through__label
+      block
+    span.c-text-link-through__over-label
+      span.c-text-link-through__over-label-in
+        block
