@@ -12,13 +12,11 @@
   background: none;
   @include l-more-than-mobile {
     width: 240px;
-    padding-top: 20px;
-    padding-bottom: 22px;
+    height: 60px;
   }
   @include l-mobile {
     width: 220px;
-    padding-top: 18px;
-    padding-bottom: 18px;
+    height: 50px;
   }
   &:before, &:after {
     content: '';
@@ -32,10 +30,16 @@
   &:after {
     background-color: #000;
   }
-  &__label {
-    display: inline-block;
-    position: relative;
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
     z-index: 10;
+  }
+  &__label {
+    display: block;
   }
   &__line-v, &__line-h {
     &:before, &:after {

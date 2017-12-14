@@ -28,10 +28,11 @@ mixin buttonBorder(tag)
     type = attributes.type,
     class = classList.parent
     )
-    span.c-button-border__label(
-      class = classList.label
-      )
-      block
+    span.c-button-border__wrap
+      span.c-button-border__label(
+        class = classList.label
+        )
+        block
     span.c-button-border__line-v(
       class = classList.lineV
       )
@@ -69,10 +70,11 @@ mixin buttonBorderV(tag)
     type = attributes.type,
     class = classList.parent
     )
-    span.c-button-border-v__label(
-      class = classList.label
-      )
-      block
+    span.c-button-border-v__wrap
+      span.c-button-border-v__label(
+        class = classList.label
+        )
+        block
     span.c-button-border-v__line-v(
       class = classList.lineV
       )
@@ -110,10 +112,11 @@ mixin buttonReel(tag)
     type = attributes.type,
     class = classList.parent
     )
-    span.c-button-reel__label(
-      class = classList.label
-      )
-      block
+    span.c-button-reel__wrap
+      span.c-button-reel__label(
+        class = classList.label
+        )
+        block
     span.c-button-reel__label.c-button-reel__label--over(
       class = classList.label
       )
@@ -158,10 +161,11 @@ mixin buttonThrough(tag)
     type = attributes.type,
     class = classList.parent
     )
-    span.c-button-through__label(
-      class = classList.label
-      )
-      block
+    span.c-button-through__wrap
+      span.c-button-through__label(
+        class = classList.label
+        )
+        block
     span.c-button-through__over-label(
       class = classList.over-label
       )
