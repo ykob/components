@@ -27,8 +27,10 @@ block contentStatic
 
     .c-flex-wrap#hamburger
       .c-flex-wrap__item.p-hamburger(
-        :class = '{ "is-opened-navi" : isOpenedNavi }'
+        :class = '{ "is-valid" : isValid === true, "is-opened-navi" : isOpenedNavi === true, "is-over" : isOveredHamburger === 1, "is-leave" : isOveredHamburger === 2 }'
         @click = 'toggleNavi',
+        @mouseover = 'mouseoverHamburger',
+        @mouseout = 'mouseoutHamburger',
         )
         .p-hamburger__line.p-hamburger__line--01
           .p-hamburger__line-in.p-hamburger__line-in--01

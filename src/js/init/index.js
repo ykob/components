@@ -12,9 +12,22 @@ export default function() {
   const vueHamburger = new Vue({
     el: '#hamburger',
     data: {
+      isValid: false,
+      isOveredHamburger: 0,
       isOpenedNavi: false,
     },
+    mounted: function() {
+      setTimeout(() => {
+        this.isValid = true;
+      }, 500);
+    },
     methods: {
+      mouseoverHamburger: function() {
+        this.isOveredHamburger = 1;
+      },
+      mouseoutHamburger: function() {
+        this.isOveredHamburger = 2;
+      },
       toggleNavi: function() {
         this.isOpenedNavi = !this.isOpenedNavi;
       }
