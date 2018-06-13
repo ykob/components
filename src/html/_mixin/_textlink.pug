@@ -1,5 +1,5 @@
 mixin textLinkStrike(tag)
-  #{tag}.c-text-link-strike(
+  #{tag}.c-textlink-strike(
     href = attributes.href,
     target = attributes.target,
     class = attributes.className
@@ -7,7 +7,7 @@ mixin textLinkStrike(tag)
     block
 
 mixin textLinkUnderline(tag)
-  #{tag}.c-text-link-underline(
+  #{tag}.c-textlink-underline(
     href = attributes.href,
     target = attributes.target,
     class = attributes.className
@@ -15,7 +15,7 @@ mixin textLinkUnderline(tag)
     block
 
 mixin textLinkThroughLine(tag)
-  #{tag}.c-text-link-through-line(
+  #{tag}.c-textlink-through-line(
     href = attributes.href,
     target = attributes.target,
     class = attributes.className
@@ -23,13 +23,13 @@ mixin textLinkThroughLine(tag)
     block
 
 mixin textLinkThrough(tag)
-  #{tag}.c-text-link-through(
+  #{tag}.c-textlink-through(
     href = attributes.href,
     target = attributes.target,
     class = attributes.className
     )
-    span.c-text-link-through__label
+    span.c-textlink-through__label
       block
-    span.c-text-link-through__over-label
-      span.c-text-link-through__over-label-in
+    span.c-textlink-through__over-label
+      span.c-textlink-through__over-label-in
         block
